@@ -1,0 +1,216 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.fix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+
+.top {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    background-color: #f4f4f4;
+}
+
+.top_loginregistry {
+    width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginregistry-left {
+    width: 120px;
+    height: 32px;
+    position: relative;
+}
+
+.loginregistry-left-ul {
+    position: absolute;
+    display: none;
+    width: 170px;
+    top: 32px;
+    margin-left: -5px;
+    background-color: #f4f4f4;
+    padding: 20px 0 20px 20px;
+    z-index: 1000;
+}
+
+.loginregistry-left-ul a {
+    color: #9196a0;
+    font-size: 14px;
+}
+
+.top_tittle {
+    color: black;
+}
+
+.login_infor {
+    color: #444;
+    font-size: 12px;
+    margin-left: 20px;
+    padding: 0 1px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.icon-gantanhao {
+    color: #d71d32;
+}
+
+.danger {
+    color: #d71d32;
+}
+
+.login-right li {
+    float: left;
+    padding-right: 10px;
+    position: relative;
+}
+
+
+/*# sourceMappingURL=index.css.map */
