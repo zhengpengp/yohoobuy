@@ -1,0 +1,14 @@
+@import 'public';
+%wrapper {
+    width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@import 'top';
+@import 'banner';
+@import 'hotgoods';
+@import 'brand';
+@import 'upper';
+@import 'newgoods';
+@import 'footer';

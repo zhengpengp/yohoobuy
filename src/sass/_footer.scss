@@ -1,0 +1,99 @@
+.footer {
+    background-color: #000;
+    font-size: 12px;
+    * {
+        box-sizing: border-box;
+    }
+    .footer-wrapper {
+        @extend %wrapper;
+        .footer-promise {
+            padding: 20px 0 10px;
+            .footer-top {
+                margin-right: 60px;
+                line-height: 30px;
+                font-size: 12px;
+                font-weight: 700;
+                .iconfont {
+                    color: #fff;
+                    font-size: 27px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+                .rgbf {
+                    color: #fff;
+                }
+                .red {
+                    color: red;
+                }
+            }
+        }
+        .footer-help {
+            .center-content {
+                padding: 15px 0;
+                border-top: 1px solid #262626;
+                font-size: 12px;
+            }
+            ul {
+                width: 110%;
+                li {
+                    width: 180px;
+                    p {
+                        line-height: 24px;
+                    }
+                }
+            }
+            a {
+                color: #666;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .footer-1 {
+                color: #fff;
+            }
+        }
+    }
+    .footer-link {
+        padding: 10px 0 14px;
+        .about-us {
+            line-height: 20px;
+            color: #666;
+            padding-left: 300px;
+            position: relative;
+            .left-flag {
+                margin-top: 3px;
+                position: absolute;
+                left: 0;
+                top: 12px;
+                a {
+                    color: #666;
+                }
+                .govicon {
+                    display: inline-block;
+                    border-radius: 2px;
+                    margin-right: 8px;
+                    background: #fff;
+                    width: 76px;
+                    height: 34px;
+                    color: #666;
+                }
+            }
+        }
+        span {
+            padding: 0 10px;
+        }
+        a {
+            color: #666;
+        }
+        .copyright {
+            text-align: center;
+            color: #666;
+            padding-top: 20px;
+            line-height: 20px;
+            .footer-text {
+                color: #666;
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.fix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+
+.top {
+    width: 100%;
+    line-height: 32px;
+    font-size: 12px;
+    background-color: #f4f4f4;
+    .top_loginregistry {
+        width: 1150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .loginregistry-left {
+        width: 120px;
+        height: 32px;
+        position: relative;
+    }
+    .loginregistry-left-ul {
+        position: absolute;
+        display: none;
+        width: 170px;
+        top: 32px;
+        margin-left: -5px;
+        background-color: #f4f4f4;
+        padding: 20px 0 20px 20px;
+        z-index: 1000;
+        a {
+            color: #9196a0;
+            font-size: 12px;
+        }
+    }
+    .top_tittle {
+        color: black;
+    }
+    .login_infor {
+        color: #444;
+        font-size: 12px;
+        margin-left: 20px;
+        padding: 0 1px;
+        height: 32px;
+        overflow: hidden;
+    }
+    .icon-gantanhao {
+        color: #d71d32;
+    }
+    .danger {
+        color: #d71d32;
+    }
+    %linksize {
+        color: #8e8e8e;
+        font-size: 13px;
+    }
+    .login {
+        float: left;
+        padding-right: 10px;
+        position: relative;
+        padding-left: 14px;
+        border-right: 1px solid#dcdcdc;
+        a {
+            color: #8e8e8e;
+        }
+    }
+    .login-right .login-list {
+        float: left;
+        padding-right: 10px;
+        position: relative;
+        padding-left: 14px;
+        border-right: 1px solid#dcdcdc;
+        cursor: pointer;
+        a {
+            @extend %linksize;
+            font-size: 12px;
+        }
+        .wechat {
+            color: #86bf4a;
+        }
+        .iconfont {
+            float: left;
+            font-size: 16px;
+            margin-right: 4px;
+        }
+        .icon-xia {
+            float: right;
+        }
+        %right {
+            margin-right: -14px;
+        }
+        .icon-weixin {
+            @extend %right;
+            color: #86bf4a;
+        }
+        .icon-kefu {
+            @extend %right;
+        }
+        .icon-phone {
+            color: #d71d32;
+        }
+        ul {
+            position: absolute;
+        }
+        .server {
+            width: 91px;
+            margin-left: -14px;
+            float: none;
+            border-top: 1px solid;
+            background-color: #eaeceb;
+            text-align: center;
+            // display: none;
+        }
+        &:hover {
+            background-color: #eaeceb;
+        }
+    }
+    .top_search {
+        height: 90px;
+        background-color: pink;
+    }
+    .top_nav {
+        background-color: #3a3a3a;
+        height: 40px;
+        .nav_wrapper {
+            @extend %wrapper;
+            li {
+                line-height: 40px;
+                padding-right: 46px;
+                box-sizing: border-box;
+                margin-right: 36px;
+                display: inline-block;
+                cursor: pointer;
+            }
+            a {
+                color: #fff;
+                font-size: 14px;
+                line-height: 14px;
+                display: inline-block;
+                position: relative;
+                &:hover {
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid #fff;
+                }
+            }
+        }
+    }
+}

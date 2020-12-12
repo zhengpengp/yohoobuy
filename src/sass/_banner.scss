@@ -1,0 +1,6 @@
+.banner {
+    margin-top: 10px;
+    height: 430px;
+    background-color: red;
+    @extend %wrapper;
+}
