@@ -5,19 +5,396 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>注册页面</title>
+    <title>新用户注册</title>
+    <meta name="keywords" content="潮流,时尚潮流,潮流服饰,潮流购物网,潮流网站">
+    <meta name="description" content="【YOHO!BUY有货】，年轻人潮流购物中心，潮流商品购物网站。作为YOHO!旗下的购物平台，汇集了全球潮流时尚商品和国内流行商品，★全场品牌正品保证，支持货到付款★">
+    <link rel="stylesheet" href="./style/registry.css">
+    <link rel="stylesheet" href="./founts/font_7rqtgdbq0hb/iconfont.css">
 </head>
 
 <body>
-    <fieldset style="width:500px;margin:0 auto;">
-        <legend>用户注册</legend>
-        <form action="http://localhost/dashboard/JavaScript/Mycode/week6/Day29-31%20jquery/projectname/php/reg.php" method="post">
-            <p><label for="">用户名：</label><input type="text" name="username" id="username"><span></span></p>
-            <p><label for="">密　码：</label><input type="password" name="password"></p>
-            <p><label for="">邮　箱：</label><input type="text" name="email"></p>
-            <p><input type="submit" value="提交注册" name="submit" id="submit"></p>
-        </form>
-    </fieldset>
+    <!-- 头部 -->
+    <div class="top fix">
+        <!-- 登录和注册 -->
+        <div class="top_loginregistry fix">
+            <div class="loginregistry-left left">
+                <ul class="loginregistry-left-ul">
+                    <li>
+                        <a href="#">YOHO!</a>
+                    </li>
+                    <li>
+                        <a href="#">YOHO!</a>
+                    </li>
+                    <li>
+                        <a href="#">YOHO!</a>
+                    </li>
+                    <li>
+                        <a href="#">YOHO!</a>
+                    </li>
+                </ul>
+                <span class="iconfont icon-iconfront- "></span>
+                <a href="#" class="top_tittle">YOHO!BUY 有货</a>
+            </div>
+            <div class="login_infor left">
+                <span class="iconfont icon-gantanhao"></span>
+                <a href="#" class="danger">关于与防诈骗的重要提醒</a>
+            </div>
+            <div class="login-right right">
+                <ul>
+                    <li id="loginBox" class="login">
+                        <span class="hi">Hi~</span> [ <a href="./login.html" class="loginbar">请登录</a> ] [ <a href="./registry.html" class="registbar">免费注册</a> ]
+                    </li>
+                    <li class="myyoho login-list">
+                        <a href="#" rel="nofollow">MY有货</a>
+                        <span class="iconfont icon-xia"></span>
+                        <div class="simple-user-center"></div>
+                    </li>
+                    <li class="myorder login-list">
+                        <span class="iconfont icon-dingdan"></span>
+                        <a href="#" rel="nofollow">我的订单</a>
+                    </li>
+                    <li class="mycollect login-list">
+                        <span class="iconfont icon-shoucang"></span>
+                        <a href="#" rel="nofollow">我的收藏</a>
+                    </li>
+                    <li class="message login-list">
+                        <span class="iconfont icon-xiaoxi"></span>
+                        <a href="#" rel="nofollow">消息</a>
+                    </li>
+                    <li class=" login-list">
+                        <span class="iconfont icon-kefu"></span>
+                        <a href="#">客户服务</a>
+                        <ul>
+                            <li class="server">
+                                在线客服
+                            </li>
+                            <li class="server">
+                                帮助中心
+                            </li>
+                        </ul>
+                    </li>
+                    <li class=" login-list">
+                        <span class="iconfont icon-weixin"></span>
+                        <a href="" class="wechat">关注有货</a>
+                    </li>
+                    <li class=" login-list">
+                        <span class="iconfont icon-phone"></span>
+                        <a href="#" rel="nofollow">手机版</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="top_search">
+
+        </div>
+        <!-- 头部导航 -->
+        <div class="top_nav">
+            <div class="nav_wrapper fix">
+                <ul class="nav-list">
+                    <li><a href="#">新品到这</a></li>
+                    <li><a href="#">品牌一览</a></li>
+                    <li><a href="#">服饰</a></li>
+                    <li><a href="#">鞋履</a></li>
+                    <li><a href="#">包袋</a></li>
+                    <li><a href="#">配饰·其他</a></li>
+                    <li><a href="#">SALE</a></li>
+                    <li><a href="#">证照/协议</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="registry-main fix">
+        <div class="passport-cover">
+            <div class="cover-content">
+                <img class="cover-img" src="https://img12.static.yhbimg.com/yhb-img01/2015/12/01/07/020a0b6e7ff908d0c2bc4045b4fef42b9f.png?imageView/2/w/252/h/190">
+            </div>
+        </div>
+        <div class="content">
+            <div class="register-page">
+                <ul>
+                    <li class="fix">
+                        <select id="region" class="region" name="region">
+                            <option value="+61">澳大利亚</option>
+                            <option value="+82">韩国</option>
+                            <option value="+1">加拿大</option>
+                            <option value="+60">马来西亚</option>
+                            <option value="+1">美国</option>
+                            <option value="+81">日本</option>
+                            <option value="+65">新加坡</option>
+                            <option value="+44">英国</option>
+                            <option selected="selected" value="+86">中国</option>
+                            <option value="+853">中国澳门</option>
+                            <option value="+886">中国台湾</option>
+                            <option value="+852">中国香港</option>
+                         </select>
+                    </li>
+                    <li class="fix" data-index="0">
+                        <span id="country-code" class="country-code">+86</span>
+                        <input value="" id="phone-num" class="input va phone-num" type="text" name="phoneNum" placeholder="请输入手机号码" autocomplete="off">
+                    </li>
+                    <li class="fix" data-index="2">
+                        <input id="msg-captcha" class="input va msg-captcha" type="text" name="msgCaptcha" placeholder="短信验证码" autocomplete="off" maxlength="4">
+                        <input id="send-captcha" class="btn send-captcha" type="button" value="获取短信验证码">
+                    </li>
+
+                    <input type="text" name="name" style="position: fixed;visibility:hidden;">
+
+                    <li class="fix" data-index="3">
+                        <input id="pwd" class="input va pwd" name="pwd" placeholder="设置密码" autocomplete="off" maxlength="20" type="password">
+                        <div class="pwd-intensity-container">
+                            <span class="pwd-intensity low">低</span>
+                            <span class="pwd-intensity mid">中</span>
+                            <span class="pwd-intensity high">高</span>
+                        </div>
+                        <div id="pwd-tips" class="hide pwd-tips">
+                            <div class="default" id="pwd-tip1"><i></i>密码只支持6-20位字符</div>
+                            <div class="default" id="pwd-tip2"><i></i>由字母、 数字组合，不能包含特殊符号</div>
+                        </div>
+                    </li>
+
+                    <li class="fix" data-index="3">
+                        <input id="invite-code" class="input invite-code" name="inviteCode" placeholder="潮流口令(非必填)" autocomplete="off" maxlength="20" type="text">
+                    </li>
+
+                    <li class="items-container fix">
+                        <span>
+                注册即表示您已阅读并同意<br>
+                <a class="link go-yoho-items" href="//www.yohobuy.com/help/detail?id=254" target="_blank">有货用户服务协议</a>
+                <a class="link go-yoho-items" href="//www.yohobuy.com/help/detail?id=256" target="_blank">有货隐私条款</a>
+            </span>
+                    </li>
+                    <li class="fix reg-btn-area">
+                        <input name="refer" id="refer" type="hidden" value="">
+                        <input id="register-btn" class="btn register-btn disable" type="submit" value="立即注册" disabled="">
+                    </li>
+                    <li class="quick-login-container">
+                        我已注册YOHO!BUY 有货账号
+                        <a class="link go-login" href="./login.html">快速登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-promise fix">
+                <div class="footer-top left">
+                    <span class="iconfont icon-2"></span>
+                    <span class="red">100%</span>
+                    <span class="rgbf">品牌正品</span>
+                </div>
+                <div class="footer-top left">
+                    <span class="iconfont icon-cangpeitubiao_fahuohuanhuofahuo"></span>
+                    <span class="red">7天</span>
+                    <span class="rgbf">无理由退换货</span>
+                </div>
+                <div class="footer-top left">
+                    <span class="iconfont icon-weixin"></span>
+                    <span class="red">便捷</span>
+                    <span class="rgbf">在线客服</span>
+                </div>
+            </div>
+            <div class="footer-help">
+                <div class="center-content fix">
+                    <div class="left">
+                        <ul class="fix">
+                            <li class="left">
+                                <p>
+                                    <span class="footer-1">新手专区</span>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=168" target="_blank" rel="nofollow">注册登录</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=170" target="_blank" rel="nofollow">购物结算</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=172" target="_blank" rel="nofollow">下单支付</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=174" target="_blank" rel="nofollow">收货评价</a>
+                                </p>
+                            </li>
+                            <li class="left">
+                                <p>
+                                    <span class="footer-1">会员中心</span>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=156" target="_blank" rel="nofollow">会员制度</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=158" target="_blank" rel="nofollow">会员优惠</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=160" target="_blank" rel="nofollow">账户管理</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=162" target="_blank" rel="nofollow">密码管理</a>
+                                </p>
+                            </li>
+                            <li class="left">
+                                <p>
+                                    <span class="footer-1">购物指南</span>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=180" target="_blank" rel="nofollow">发票</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=182" target="_blank" rel="nofollow">尺码对照</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=184" target="_blank" rel="nofollow">尺码解读</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=186" target="_blank" rel="nofollow">商品咨询</a>
+                                </p>
+                            </li>
+                            <li class="left">
+                                <p>
+                                    <span class="footer-1">支付方式</span>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=192" target="_blank" rel="nofollow">在线支付</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=194" target="_blank" rel="nofollow">货到付款</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=196" target="_blank" rel="nofollow">分期支付</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=198" target="_blank" rel="nofollow">优惠券、有货币</a>
+                                </p>
+                            </li>
+                            <li class="left">
+                                <p>
+                                    <span class="footer-1">配送方式</span>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=204" target="_blank" rel="nofollow">配送说明</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=206" target="_blank" rel="nofollow">运费说明</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=208" target="_blank" rel="nofollow">验货签收</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=210" target="_blank" rel="nofollow">收货样品</a>
+                                </p>
+                            </li>
+                            <li class="left">
+                                <p>
+                                    <span class="footer-1">售后服务</span>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=214" target="_blank" rel="nofollow">退换货政策</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=216" target="_blank" rel="nofollow">退换货流程</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=220" target="_blank" rel="nofollow">投诉与建议</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/service/client" target="_blank" rel="nofollow">在线客服</a>
+                                </p>
+                            </li>
+                            <li class="left">
+                                <p>
+                                    <span class="footer-1">APP常见问题</span>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=224" target="_blank" rel="nofollow">IPhone版</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=226" target="_blank" rel="nofollow">Android版</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=228" target="_blank" rel="nofollow">wap版</a>
+                                </p>
+                                <p>
+                                    <a href="//www.yohobuy.com/help/detail?id=230" target="_blank" rel="nofollow">IPAD版</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-link">
+                <div class="center-content fix">
+                    <div class="about-us fix">
+                        <div class="left-flag left">
+                            <a class="govicon" href="http://218.94.38.245/mbm/entweb/elec/certView.shtml?siteId=f2b6e3b8d18241afb8dd6cadf7f15406" target="_blank" rel="nofollow">
+                                <div class="govimg"></div>
+                            </a>
+                            <a href="https://ss.knet.cn/verifyseal.dll?sn=e14021832010046477dka7000000&amp;ct=df&amp;a=1&amp;pa=0.5902942178957805" target="_blank" rel="nofollow">
+                                <img src="//static.yohobuy.com/images/v3/icon/credit-flag3.png?imageView2/2/interlace/1/q/75" style="margin-right: 5px;">
+                            </a>
+                            <a href="http://www.isc.org.cn/" target="_blank" rel="nofollow">
+                                <img src="//static.yohobuy.com/images/v3/icon/isc2.png?imageView2/2/interlace/1/q/75" style="margin-right: 5px;">
+                            </a>
+                        </div>
+                        <p class="links">
+                            <a href="//www.yohobuy.com" rel="nofollow">返回首页</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/yohobuy.html" rel="nofollow">YOHO!BUY 有货</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/newpower.html" rel="nofollow">新力传媒</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/contact.html" rel="nofollow">联系我们</a>
+                            <span>|</span>
+                            <a href="//shop.yohobuy.com/settled" rel="nofollow">商家入驻</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/privacy.html" rel="nofollow">隐私条款</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/link.html" rel="nofollow">友情链接</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/brands">潮流品牌大全</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/cate">潮流品类大全</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/cpdq">潮流产品大全</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/news">潮流资讯</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t2">穿衣搭配(男生版)</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/girls-t2">穿衣搭配(女生版)</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t1001">潮流人气</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t4">潮流潮品</a>
+                            <span>|</span>
+                            <a href="//www.yohobuy.com/guang/boys-t22">潮流视频</a>
+                            <span>|</span>
+                            <a class="police" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010502010132" rel="nofollow">苏公网安备 32010502010132号</a>
+                            <span>|</span>
+                            <a target="_blank" href="http://www.yohobuy.com/help/qualificationInfo" rel="nofollow">出版物经营许可证</a>
+                            <span>|</span>
+                            <a target="_blank" href="https://www.yohobuy.com/help/detail?id=238" rel="nofollow">苏B2-20120395</a>
+                            <span>|</span>
+                            <a target="_blank" href="https://www.yohobuy.com/help/detail?id=266" rel="nofollow">食品经营许可证</a>
+                        </p>
+                    </div>
+                    <div class="copyright">
+                        <p class="footer-text">
+                            CopyRight © 2007-2020 南京新与力文化传播有限公司
+                            <a class="rbg6" href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">苏ICP备09011225号</a> NewPower Co. 版权所有 江苏省南京市建邺区嘉陵江东街18号南京国家广告产业园5栋17，18楼 025-87781000
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

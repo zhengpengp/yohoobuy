@@ -150,7 +150,7 @@ a {
   visibility: hidden;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_nav .nav_wrapper, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -290,254 +290,101 @@ a {
   border-bottom: 2px solid #fff;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
+.passport-page {
   margin-right: auto;
+  margin-left: auto;
+  width: 1150px;
+  font-size: 12px;
+  text-align: center;
 }
-
-.banner {
+.passport-page .login-impor {
+  display: inline-block;
+  width: 990px;
+  height: 25px;
+  background-color: #f5f5f5;
+  line-height: 25px;
+  overflow: hidden;
   margin-top: 10px;
-  height: 430px;
-  background-color: red;
 }
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hotgoods {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.hotgoods .hotgoods-top {
-  position: relative;
-  margin: 80px 0 40px;
-}
-.hotgoods .hotgoods-top .hotgoods-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
-  font-size: 16px;
-  text-align: center;
-}
-.hotgoods .hotgoods-li {
+.passport-page .passport-cover {
   float: left;
-  height: 248px;
-  width: 185px;
-  border: 1px solid red;
+  margin: 107px 0;
+  width: 575px;
 }
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.brand {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.brand .brand-top {
+.passport-page .relative {
   position: relative;
-  margin: 80px 0 40px;
 }
-.brand .brand-top .brand-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
-  font-size: 16px;
+.passport-page .content {
+  float: left;
+  margin-top: 107px;
+  padding-left: 85px;
+  width: 274px;
+  font-size: 15px;
+}
+.passport-page .content li {
+  margin-bottom: 25px;
+}
+.passport-page .content h2 {
+  font-size: 20px;
+}
+.passport-page .content .country {
+  font-size: 18px;
+  color: #b9b9b9;
+}
+.passport-page .content .country .icon-xia {
+  color: #b9b9b9;
+  cursor: pointer;
+}
+.passport-page .content .switch {
+  height: 27px;
+}
+.passport-page .content .left-part {
+  color: white;
+  background-color: #000;
+  width: 146px;
+  height: 27px;
   text-align: center;
+  line-height: 27px;
+  border-radius: 13px;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  z-index: 1;
 }
-.brand .brand-banner {
-  position: relative;
+.passport-page .content .right-part {
+  background-color: #cccccc;
+  width: 146px;
+  height: 27px;
+  text-align: center;
+  line-height: 27px;
+  border-radius: 13px;
+  position: absolute;
+  right: 0;
+}
+.passport-page .content input {
+  width: 268px;
+  height: 43px;
+  border: 1px solid #dbdbdb;
+  color: #9a9a9a;
+  color: rgba(0, 0, 0, 0.5);
+  text-indent: 10px;
+  font-size: 16px;
+  height: 47px;
+}
+.passport-page .content .btn {
+  display: block;
   width: 100%;
-  height: 175px;
-  background-color: skyblue;
-}
-.brand li {
-  float: left;
-  margin: 8px 6px 0 0;
-  width: 185px;
-  height: 86px;
-  line-height: 86px;
-  font-size: 0;
+  height: 46px;
+  background-color: #ff1901;
+  color: #fff;
   text-align: center;
-  background-color: chartreuse;
+  letter-spacing: 10px;
+  font-size: 20px;
+  line-height: 46px;
+  cursor: pointer;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.upper {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.upper .upper-top {
-  position: relative;
-  margin: 80px 0 40px;
-}
-.upper .upper-top .upper-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
-  font-size: 16px;
-  text-align: center;
-}
-.upper .upper-top .upper-top-navs {
-  position: absolute;
-  padding: 10px 0;
-  top: 0;
-  right: 0;
-  font-size: 14px;
-}
-.upper .upper-top .upper-top-navs a {
-  color: #333;
-}
-.upper .upper-top .upper-top-navs a:hover {
-  text-decoration: underline;
-}
-.upper .upper-body {
-  margin-bottom: 8px;
-}
-.upper .upper-body .upper-nav {
-  width: 185px;
-  float: left;
-}
-.upper .upper-body .upper-nav .upper-keywords {
-  margin-bottom: 8px;
-}
-.upper .upper-body .upper-nav .upper-keywords .upper-link1 {
-  display: block;
-  height: 152px;
-  margin-bottom: 10px;
-  background-color: pink;
-}
-.upper .upper-body .upper-nav .upper-keywords .upper-link2 {
-  display: block;
-  height: 86px;
-  margin-bottom: 10px;
-  background-color: pink;
-}
-.upper .upper-body .upper-nav .upper-list {
-  height: 228px;
-  padding: 10px 0;
-  background-color: #f8f8f8;
-  overflow: hidden;
-}
-.upper .upper-body .upper-nav .upper-list a {
-  display: block;
-  float: left;
-  height: 38px;
-  line-height: 38px;
-  font-size: 14px;
-  width: 50%;
-  text-align: center;
-  color: #000;
-  overflow: hidden;
-}
-.upper .upper-body .upper-brand {
-  float: left;
-  width: 378px;
-  height: 512px;
-  overflow: hidden;
-  margin-left: 8px;
-}
-.upper .upper-body .upper-brand li {
-  margin-bottom: 8px;
-  background-color: red;
-}
-.upper .upper-body .upper-goods {
-  float: left;
-  overflow: hidden;
-  margin-top: -8px;
-  width: 579px;
-}
-.upper .upper-body .upper-goods li {
-  float: left;
-  margin-left: 8px;
-  margin-top: 8px;
-}
-.upper .upper-body .upper-goods li a {
-  display: block;
-  width: 185px;
-  height: 248px;
-  background-color: purple;
-}
-.upper .upper-products {
-  margin-left: -10px;
-  margin-top: 10px;
-}
-.upper .upper-products li {
-  float: left;
-  margin-left: 10px;
-}
-.upper .upper-products li a {
-  width: 222px;
-  height: 298px;
-  display: block;
-  background-color: rosybrown;
-}
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.newgoods {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.newgoods .newgoods-top {
-  position: relative;
-  margin: 80px 0 40px;
-}
-.newgoods .newgoods-top .newgoods-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
-  font-size: 16px;
-  text-align: center;
-}
-.newgoods .newgoods-top .newgoods-top-navs {
-  position: absolute;
-  padding: 10px 0;
-  top: 0;
-  right: 0;
-  font-size: 14px;
-}
-.newgoods .newgoods-top .newgoods-top-navs a {
-  color: #333;
-}
-.newgoods .newgoods-top .newgoods-top-navs a:hover {
-  text-decoration: underline;
-}
-.newgoods .newgoods-main {
-  margin-right: -10px;
-}
-.newgoods .newgoods-main .newgoods-list {
-  width: 222px;
-  height: 408px;
-  float: left;
-  margin-right: 10px;
-  border: 1px solid red;
-}
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_nav .nav_wrapper, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -638,4 +485,4 @@ a {
   color: #666;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=login.css.map */

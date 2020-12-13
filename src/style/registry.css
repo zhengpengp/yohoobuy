@@ -150,7 +150,7 @@ a {
   visibility: hidden;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_nav .nav_wrapper, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -290,254 +290,143 @@ a {
   border-bottom: 2px solid #fff;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
+.registry-main {
   margin-right: auto;
-}
-
-.banner {
-  margin-top: 10px;
-  height: 430px;
-  background-color: red;
-}
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
   margin-left: auto;
-  margin-right: auto;
+  width: 1150px;
 }
-
-.hotgoods {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.hotgoods .hotgoods-top {
-  position: relative;
-  margin: 80px 0 40px;
-}
-.hotgoods .hotgoods-top .hotgoods-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
-  font-size: 16px;
-  text-align: center;
-}
-.hotgoods .hotgoods-li {
+.registry-main .passport-cover {
   float: left;
-  height: 248px;
-  width: 185px;
-  border: 1px solid red;
+  margin: 107px 0;
+  width: 575px;
 }
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.brand {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.brand .brand-top {
-  position: relative;
-  margin: 80px 0 40px;
-}
-.brand .brand-top .brand-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
-  font-size: 16px;
-  text-align: center;
-}
-.brand .brand-banner {
-  position: relative;
+.registry-main .cover-content {
+  padding: 50px 0;
   width: 100%;
-  height: 175px;
-  background-color: skyblue;
+  height: 318px;
+  border-right: 1px solid #dfdfdf;
 }
-.brand li {
+.registry-main .cover-content .cover-img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 252px;
+  height: 190px;
+}
+.registry-main .content {
   float: left;
-  margin: 8px 6px 0 0;
-  width: 185px;
-  height: 86px;
-  line-height: 86px;
-  font-size: 0;
-  text-align: center;
-  background-color: chartreuse;
+  margin-top: 107px;
+  padding-left: 85px;
 }
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
+.registry-main .content .register-page {
+  color: #b9b9b9;
+  font-size: 14px;
 }
-
-.upper {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.upper .upper-top {
-  position: relative;
-  margin: 80px 0 40px;
-}
-.upper .upper-top .upper-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
+.registry-main .content .register-page .input {
+  padding: 0;
+  width: 268px;
+  height: 43px;
+  border: 1px solid #dbdbdb;
+  color: #9a9a9a;
+  text-indent: 10px;
   font-size: 16px;
-  text-align: center;
+  line-height: 43px;
 }
-.upper .upper-top .upper-top-navs {
+.registry-main .content .register-page li {
+  position: relative;
+  margin-bottom: 25px;
+  width: 270px;
+}
+.registry-main .content .register-page .region {
+  padding: 4px 0;
+  width: 132px;
+  height: 30px;
+  border-color: #c1c1c1;
+  color: #9a9a9a;
+  font-size: 16px;
+}
+.registry-main .content .register-page .country-code {
+  display: block;
+  float: left;
+  width: 58px;
+  height: 43px;
+  border: 1px solid #dbdbdb;
+  border-right: 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 43px;
+}
+.registry-main .content .register-page .phone-num {
   position: absolute;
-  padding: 10px 0;
   top: 0;
   right: 0;
-  font-size: 14px;
+  display: block;
+  width: 209px;
 }
-.upper .upper-top .upper-top-navs a {
-  color: #333;
-}
-.upper .upper-top .upper-top-navs a:hover {
-  text-decoration: underline;
-}
-.upper .upper-body {
-  margin-bottom: 8px;
-}
-.upper .upper-body .upper-nav {
-  width: 185px;
+.registry-main .content .register-page .input.msg-captcha {
   float: left;
+  width: 160px;
 }
-.upper .upper-body .upper-nav .upper-keywords {
-  margin-bottom: 8px;
-}
-.upper .upper-body .upper-nav .upper-keywords .upper-link1 {
-  display: block;
-  height: 152px;
-  margin-bottom: 10px;
-  background-color: pink;
-}
-.upper .upper-body .upper-nav .upper-keywords .upper-link2 {
-  display: block;
-  height: 86px;
-  margin-bottom: 10px;
-  background-color: pink;
-}
-.upper .upper-body .upper-nav .upper-list {
-  height: 228px;
-  padding: 10px 0;
-  background-color: #f8f8f8;
-  overflow: hidden;
-}
-.upper .upper-body .upper-nav .upper-list a {
-  display: block;
-  float: left;
-  height: 38px;
-  line-height: 38px;
-  font-size: 14px;
-  width: 50%;
+.registry-main .content .register-page .btn {
+  width: 100px;
+  padding: 0;
+  height: 45px;
+  border: none;
+  color: #fff;
   text-align: center;
-  color: #000;
-  overflow: hidden;
-}
-.upper .upper-body .upper-brand {
-  float: left;
-  width: 378px;
-  height: 512px;
-  overflow: hidden;
-  margin-left: 8px;
-}
-.upper .upper-body .upper-brand li {
-  margin-bottom: 8px;
+  line-height: 45px;
   background-color: red;
 }
-.upper .upper-body .upper-goods {
-  float: left;
+.registry-main .content .register-page .pwd-intensity-container {
   overflow: hidden;
-  margin-top: -8px;
-  width: 579px;
+  margin-top: 5px;
+  width: 270px;
+  height: auto;
+  text-align: right;
 }
-.upper .upper-body .upper-goods li {
-  float: left;
-  margin-left: 8px;
-  margin-top: 8px;
-}
-.upper .upper-body .upper-goods li a {
-  display: block;
-  width: 185px;
-  height: 248px;
-  background-color: purple;
-}
-.upper .upper-products {
-  margin-left: -10px;
-  margin-top: 10px;
-}
-.upper .upper-products li {
-  float: left;
-  margin-left: 10px;
-}
-.upper .upper-products li a {
-  width: 222px;
-  height: 298px;
-  display: block;
-  background-color: rosybrown;
-}
-
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
-  width: 1150px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.newgoods {
-  margin-left: -8px;
-  margin: 0 auto;
-}
-.newgoods .newgoods-top {
-  position: relative;
-  margin: 80px 0 40px;
-}
-.newgoods .newgoods-top .newgoods-top-title {
-  margin: 0 auto;
-  width: 298px;
-  height: 31px;
-  line-height: 31px;
-  border: 1px solid #000;
-  font-size: 16px;
+.registry-main .content .register-page .pwd-intensity-container span {
+  padding: 1px 10px;
+  height: 15px;
+  background-color: #e8e8e8;
   text-align: center;
+  font-size: 12px;
 }
-.newgoods .newgoods-top .newgoods-top-navs {
+.registry-main .content .register-page .pwd-tips {
   position: absolute;
-  padding: 10px 0;
-  top: 0;
-  right: 0;
-  font-size: 14px;
+  top: -10px;
+  left: 285px;
+  padding-top: 7px;
+  width: 160px;
+  height: 72px;
+  background-position: -148px -158px;
+  background-size: 595px 298px;
+  font-size: 12px;
 }
-.newgoods .newgoods-top .newgoods-top-navs a {
-  color: #333;
+.registry-main .content .register-page .items-container {
+  text-align: left;
+  white-space: nowrap;
+  font-size: 13px;
 }
-.newgoods .newgoods-top .newgoods-top-navs a:hover {
+.registry-main .content .register-page .items-container .link {
+  margin: 8px 10px 0 0;
+  display: inline-block;
+  color: red;
   text-decoration: underline;
 }
-.newgoods .newgoods-main {
-  margin-right: -10px;
-}
-.newgoods .newgoods-main .newgoods-list {
-  width: 222px;
-  height: 408px;
+.registry-main .content .register-page .register-btn {
+  background: #555;
+  width: 270px;
+  font-weight: 700;
+  font-size: 20px;
   float: left;
-  margin-right: 10px;
-  border: 1px solid red;
+}
+.registry-main .content .register-page .go-login {
+  text-decoration: underline;
+  color: red;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_nav .nav_wrapper, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -638,4 +527,4 @@ a {
   color: #666;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=registry.css.map */
