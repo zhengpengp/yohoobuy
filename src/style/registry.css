@@ -150,7 +150,7 @@ a {
   visibility: hidden;
 }
 
-.top .top_nav .nav_wrapper, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -250,6 +250,7 @@ a {
 }
 .top .login-right .login-list ul {
   position: absolute;
+  display: none;
 }
 .top .login-right .login-list .server {
   width: 91px;
@@ -262,9 +263,28 @@ a {
 .top .login-right .login-list:hover {
   background-color: #eaeceb;
 }
+.top .top-kefu:hover ul {
+  display: block;
+}
 .top .top_search {
   height: 90px;
-  background-color: pink;
+}
+.top .main-logo {
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-en.png?173272e8fce) no-repeat 50%;
+  width: 182px;
+  height: 53px;
+  left: 43%;
+  margin-top: 22px;
+  position: absolute;
+  animation: logoflip 20s infinite;
+  -moz-animation: logoflip 20s infinite;
+  -webkit-animation: logoflip 2s infinite;
+  -o-animation: logoflip 20s infinite;
+  transition: all .5s;
+}
+.top .logo-cn {
+  transform: rotateX(180deg);
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-cn.png?173272e8fce) no-repeat 50%;
 }
 .top .top_nav {
   background-color: #3a3a3a;
@@ -288,6 +308,50 @@ a {
 .top .top_nav .nav_wrapper a:hover {
   padding-bottom: 3px;
   border-bottom: 2px solid #fff;
+}
+.top .func-area {
+  float: right;
+  width: 378px;
+  padding-right: 18px;
+  margin-top: 40px;
+}
+.top .func-area .search {
+  width: 320px;
+  height: 28px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.top .func-area .search form {
+  background-color: #3a3a3a;
+  border: 1px solid #3a3a3a;
+  overflow: hidden;
+}
+.top .func-area .search form input {
+  width: 240px;
+  height: 32px;
+  border: none;
+  background: #fff;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.top .func-area .search .search-btn {
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/search.png?173272e8fd2) no-repeat 50%;
+  width: 78px;
+  height: 28px;
+  float: right;
+  border: none;
+  cursor: pointer;
+}
+.top .func-area .go-cart {
+  width: 30px;
+  height: 30px;
+  float: right;
+  cursor: pointer;
+  position: relative;
+}
+.top .func-area .go-cart .iconfont {
+  font-size: 26px;
+  color: #3a3a3a;
 }
 
 .registry-main {
@@ -426,7 +490,7 @@ a {
   color: red;
 }
 
-.top .top_nav .nav_wrapper, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;

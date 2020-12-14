@@ -9,6 +9,7 @@
     <meta name="description" content="【YOHO!BUY有货】，年轻人潮流购物中心，潮流商品购物网站。作为YOHO!旗下的购物平台，汇集了全球潮流时尚商品和国内流行商品，★全场品牌正品保证，支持货到付款★">
     <link rel="stylesheet" href="./style/login.css">
     <link rel="stylesheet" href="./founts/font_7rqtgdbq0hb/iconfont.css">
+    <script src="./script/login_module.js"></script>
 </head>
 
 <body>
@@ -59,15 +60,15 @@
                         <span class="iconfont icon-xiaoxi"></span>
                         <a href="#" rel="nofollow">消息</a>
                     </li>
-                    <li class=" login-list">
+                    <li class="top-kefu login-list">
                         <span class="iconfont icon-kefu"></span>
                         <a href="#">客户服务</a>
                         <ul>
                             <li class="server">
-                                在线客服
+                                <a href="#">在线客服</a>
                             </li>
                             <li class="server">
-                                帮助中心
+                                <a href="#">帮助中心</a>
                             </li>
                         </ul>
                     </li>
@@ -84,7 +85,28 @@
         </div>
         <!-- 搜索框 -->
         <div class="top_search">
+            <!-- https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-en.png?173272e8fce 
+            https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-cn.png?173272e8fce
+        -->
+            <div>
+                <h1 class="main-logo">
+                    <a href="//www.yohobuy.com/ " class="main-link " title="YOHO!BUY 有货-潮流服饰,潮流女装,潮流男装,时尚潮流购物网站 "></a>
+                </h1>
+            </div>
+            <div class="func-area">
+                <div class="search">
+                    <form action="//www.yohobuy.com/search" method="get" id="search-form">
+                        <input class="search-key" type="text" style="color: rgb(153, 153, 153);">
+                        <a class="search-btn" href="javascript:submitSearch();"></a>
+                    </form>
+                </div>
 
+                <div class="go-cart">
+                    <a href="//www.yohobuy.com/cart/cart" rel="nofollow">
+                        <span class="iconfont icon-gouwuchekong"></span>
+                    </a>
+                </div>
+            </div>
         </div>
         <!-- 头部导航 -->
         <div class="top_nav">
@@ -114,35 +136,28 @@
                 <img class="cover-img" src="https://img12.static.yhbimg.com/yhb-img01/2015/12/01/07/020a0b6e7ff908d0c2bc4045b4fef42b9f.png?imageView/2/w/252/h/190">
             </div>
         </div>
-        <form method="POST">
+        <form method="POST" id="registry">
             <div class="content">
                 <ul>
                     <li class="fix">
                         <h2 class="left">会员登录</h2>
-                        <div class="right country">中国+86 <span class="iconfont icon-xia"></span></div>
-                    </li>
-                    <li class="relative">
-                        <div class="switch">
-                            <div class="left selected left-part" data-type="PasswordLogin">普通登录</div>
-                            <div class="right right-part" data-type="SMSLogin">手机验证码登录</div>
-                        </div>
                     </li>
                     <li class="relative password-login">
-                        <input id="account1" class="account input va" name="account" value="" type="text" placeholder="邮箱/手机号码" autocomplete="off">
+                        <input id="account1" class="account input" name="username" value="" type="text" placeholder="邮箱/手机号码">
                         <span class="err-tip hide">
                             <i></i>
                             <em></em>
                         </span>
                     </li>
                     <li class="relative password-login">
-                        <input id="account1" class="account input va" name="account" value="" type="text" placeholder="密码" autocomplete="off">
+                        <input id="account1" class="account input" name="password" value="" type="password" placeholder="密码">
                         <span class="err-tip hide">
                             <i></i>
                             <em></em>
                         </span>
                     </li>
                     <li>
-                        <span class="btn">登录</span>
+                        <span id="login" class="btn">登录</span>
                     </li>
                 </ul>
             </div>

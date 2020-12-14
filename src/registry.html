@@ -61,15 +61,15 @@
                         <span class="iconfont icon-xiaoxi"></span>
                         <a href="#" rel="nofollow">消息</a>
                     </li>
-                    <li class=" login-list">
+                    <li class="top-kefu login-list">
                         <span class="iconfont icon-kefu"></span>
                         <a href="#">客户服务</a>
                         <ul>
                             <li class="server">
-                                在线客服
+                                <a href="#">在线客服</a>
                             </li>
                             <li class="server">
-                                帮助中心
+                                <a href="#">帮助中心</a>
                             </li>
                         </ul>
                     </li>
@@ -86,7 +86,28 @@
         </div>
         <!-- 搜索框 -->
         <div class="top_search">
+            <!-- https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-en.png?173272e8fce 
+            https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-cn.png?173272e8fce
+        -->
+            <div>
+                <h1 class="main-logo">
+                    <a href="//www.yohobuy.com/ " class="main-link " title="YOHO!BUY 有货-潮流服饰,潮流女装,潮流男装,时尚潮流购物网站 "></a>
+                </h1>
+            </div>
+            <div class="func-area">
+                <div class="search">
+                    <form action="//www.yohobuy.com/search" method="get" id="search-form">
+                        <input class="search-key" type="text" style="color: rgb(153, 153, 153);">
+                        <a class="search-btn" href="javascript:submitSearch();"></a>
+                    </form>
+                </div>
 
+                <div class="go-cart">
+                    <a href="//www.yohobuy.com/cart/cart" rel="nofollow">
+                        <span class="iconfont icon-gouwuchekong"></span>
+                    </a>
+                </div>
+            </div>
         </div>
         <!-- 头部导航 -->
         <div class="top_nav">
@@ -115,22 +136,7 @@
         <div class="content">
             <div class="register-page">
                 <ul>
-                    <li class="fix">
-                        <select id="region" class="region" name="region">
-                            <option value="+61">澳大利亚</option>
-                            <option value="+82">韩国</option>
-                            <option value="+1">加拿大</option>
-                            <option value="+60">马来西亚</option>
-                            <option value="+1">美国</option>
-                            <option value="+81">日本</option>
-                            <option value="+65">新加坡</option>
-                            <option value="+44">英国</option>
-                            <option selected="selected" value="+86">中国</option>
-                            <option value="+853">中国澳门</option>
-                            <option value="+886">中国台湾</option>
-                            <option value="+852">中国香港</option>
-                         </select>
-                    </li>
+
                     <li class="fix" data-index="0">
                         <span id="country-code" class="country-code">+86</span>
                         <input value="" id="phone-num" class="input va phone-num" type="text" name="phoneNum" placeholder="请输入手机号码" autocomplete="off">
@@ -154,11 +160,6 @@
                             <div class="default" id="pwd-tip2"><i></i>由字母、 数字组合，不能包含特殊符号</div>
                         </div>
                     </li>
-
-                    <li class="fix" data-index="3">
-                        <input id="invite-code" class="input invite-code" name="inviteCode" placeholder="潮流口令(非必填)" autocomplete="off" maxlength="20" type="text">
-                    </li>
-
                     <li class="items-container fix">
                         <span>
                 注册即表示您已阅读并同意<br>

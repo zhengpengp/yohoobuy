@@ -150,7 +150,7 @@ a {
   visibility: hidden;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -250,6 +250,7 @@ a {
 }
 .top .login-right .login-list ul {
   position: absolute;
+  display: none;
 }
 .top .login-right .login-list .server {
   width: 91px;
@@ -262,9 +263,28 @@ a {
 .top .login-right .login-list:hover {
   background-color: #eaeceb;
 }
+.top .top-kefu:hover ul {
+  display: block;
+}
 .top .top_search {
   height: 90px;
-  background-color: pink;
+}
+.top .main-logo {
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-en.png?173272e8fce) no-repeat 50%;
+  width: 182px;
+  height: 53px;
+  left: 43%;
+  margin-top: 22px;
+  position: absolute;
+  animation: logoflip 20s infinite;
+  -moz-animation: logoflip 20s infinite;
+  -webkit-animation: logoflip 2s infinite;
+  -o-animation: logoflip 20s infinite;
+  transition: all .5s;
+}
+.top .logo-cn {
+  transform: rotateX(180deg);
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-cn.png?173272e8fce) no-repeat 50%;
 }
 .top .top_nav {
   background-color: #3a3a3a;
@@ -289,8 +309,52 @@ a {
   padding-bottom: 3px;
   border-bottom: 2px solid #fff;
 }
+.top .func-area {
+  float: right;
+  width: 378px;
+  padding-right: 18px;
+  margin-top: 40px;
+}
+.top .func-area .search {
+  width: 320px;
+  height: 28px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.top .func-area .search form {
+  background-color: #3a3a3a;
+  border: 1px solid #3a3a3a;
+  overflow: hidden;
+}
+.top .func-area .search form input {
+  width: 240px;
+  height: 32px;
+  border: none;
+  background: #fff;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.top .func-area .search .search-btn {
+  background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/search.png?173272e8fd2) no-repeat 50%;
+  width: 78px;
+  height: 28px;
+  float: right;
+  border: none;
+  cursor: pointer;
+}
+.top .func-area .go-cart {
+  width: 30px;
+  height: 30px;
+  float: right;
+  cursor: pointer;
+  position: relative;
+}
+.top .func-area .go-cart .iconfont {
+  font-size: 26px;
+  color: #3a3a3a;
+}
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -299,10 +363,95 @@ a {
 .banner {
   margin-top: 10px;
   height: 430px;
-  background-color: red;
+  position: relative;
+}
+.banner .banner-img {
+  position: relative;
+}
+.banner .banner-img li {
+  position: absolute;
+  width: 1150px;
+  opacity: 0;
+}
+.banner .banner-img li a {
+  display: block;
+  width: 100%;
+}
+.banner .banner-img li img {
+  width: 100%;
+}
+.banner .banner-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 7px;
+  text-align: center;
+}
+.banner .banner-list .banner-list-inner {
+  display: inline-block;
+  position: relative;
+  padding: 7px;
+  vertical-align: middle;
+}
+.banner .banner-list .slide-shade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.3;
+  border-radius: 13px;
+}
+.banner .banner-list li {
+  position: relative;
+  display: inline-block;
+  margin: 0 7px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  cursor: pointer;
+  opacity: .6;
+  border-radius: 6px;
+  z-index: 2;
+}
+.banner .banner-list .focus {
+  opacity: 1;
+}
+.banner .banner-switch a.prev {
+  left: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin: -30px 0 0;
+  width: 60px;
+  height: 60px;
+  line-height: 56px;
+  text-align: center;
+  z-index: 2;
+  background: #fff;
+  opacity: .55;
+}
+.banner .banner-switch a.next {
+  right: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin: -30px 0 0;
+  width: 60px;
+  height: 60px;
+  line-height: 56px;
+  text-align: center;
+  z-index: 2;
+  background: #fff;
+  opacity: .55;
+}
+.banner .banner-switch .iconfont {
+  font-size: 32px;
+  color: #59585a;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -327,12 +476,11 @@ a {
 }
 .hotgoods .hotgoods-li {
   float: left;
-  height: 248px;
-  width: 185px;
-  border: 1px solid red;
+  margin-left: 6px;
+  margin-bottom: 8px;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -355,13 +503,7 @@ a {
   font-size: 16px;
   text-align: center;
 }
-.brand .brand-banner {
-  position: relative;
-  width: 100%;
-  height: 175px;
-  background-color: skyblue;
-}
-.brand li {
+.brand .brand-list li {
   float: left;
   margin: 8px 6px 0 0;
   width: 185px;
@@ -369,10 +511,80 @@ a {
   line-height: 86px;
   font-size: 0;
   text-align: center;
-  background-color: chartreuse;
+}
+.brand .logo-brand-switch {
+  position: relative;
+  background: url(../imges/logo-brand-line.png) no-repeat 50%;
+  line-height: normal;
+}
+.brand .logo-brand-switch a {
+  color: #000;
+}
+.brand .logo-brand-switch .iconfont.prev {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  margin-left: -48px;
+  font-size: 32px;
+}
+.brand .logo-brand-switch .iconfont.next {
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  margin-left: 20px;
+  font-size: 32px;
+}
+.brand .brand-more {
+  font-size: 16px;
+}
+.brand .brand-more a {
+  color: #000;
+}
+.brand .brand-more a:hover {
+  text-decoration: underline;
+}
+.brand .img-brand {
+  height: 175px;
+  position: relative;
+  overflow: hidden;
+}
+.brand .img-brand .img-list {
+  width: 3000px;
+  position: absolute;
+  left: 0;
+}
+.brand .img-brand .img-item {
+  float: left;
+  margin-right: 6px;
+  width: 378px;
+  height: 175px;
+  line-height: 175px;
+  overflow: hidden;
+  font-size: 0;
+  text-align: center;
+}
+.brand .img-brand .prev {
+  position: absolute;
+  left: 0;
+}
+.brand .img-brand .next {
+  position: absolute;
+  right: 0px;
+}
+.brand .img-brand .img-brand-switch a {
+  position: absolute;
+  top: 50%;
+  margin: -20px 0 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 2;
+  background: #fff;
+  opacity: .55;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -490,7 +702,7 @@ a {
   background-color: rosybrown;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -529,15 +741,38 @@ a {
 .newgoods .newgoods-main {
   margin-right: -10px;
 }
-.newgoods .newgoods-main .newgoods-list {
+.newgoods .newgoods-main li {
   width: 222px;
   height: 408px;
   float: left;
-  margin-right: 10px;
-  border: 1px solid red;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.newgoods .newgoods-main li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  text-align: center;
+}
+.newgoods .newgoods-main li a img {
+  width: 100%;
+}
+.newgoods .newgoods-main li a p {
+  font-size: 12px;
+  width: 222px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 20px;
+}
+.newgoods .newgoods-main li a span {
+  font-size: 12px;
+  display: block;
+  margin-top: 10px;
 }
 
-.top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
+.top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
   width: 1150px;
   margin-left: auto;
   margin-right: auto;
@@ -636,6 +871,90 @@ a {
 }
 .footer .footer-link .copyright .footer-text {
   color: #666;
+}
+
+.right-floating-layer {
+  position: fixed;
+  width: 60px;
+  left: 50%;
+  bottom: 20px;
+  margin-left: 595px;
+  z-index: 4;
+}
+.right-floating-layer .qrcode-hover-box {
+  width: 71px;
+  position: relative;
+  left: -11px;
+  text-align: right;
+}
+.right-floating-layer .qrcode-hover-box .layer-box:first-child {
+  margin-top: 0;
+}
+.right-floating-layer .qrcode-hover-box .qrcode-download-right {
+  display: inline-block;
+}
+.right-floating-layer .layer-box {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background: #000;
+  opacity: .5;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.right-floating-layer .layer-box .qrcode-img {
+  width: 28px;
+  height: 28px;
+  background-image: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.scss.png?t=1594090251211);
+  background-position: -71px 0;
+  background-size: 123px 122px;
+  display: inline-block;
+  margin-top: 16px;
+}
+.right-floating-layer .layer-box .download-app-box {
+  position: absolute;
+  bottom: -80px;
+  left: -286px;
+  width: 296px;
+  height: 180px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: transparent;
+  z-index: 1000;
+  display: none;
+  border: none;
+}
+.right-floating-layer .layer-box .download-app-box:hover {
+  display: block;
+}
+.right-floating-layer .layer-box .download-app-box .download-app-left,
+.right-floating-layer .layer-box .download-app-box .download-app-right {
+  position: relative;
+  float: left;
+  width: 130px;
+  height: 180px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+.right-floating-layer .layer-box .download-app-box .download-app-left .qr-code-img,
+.right-floating-layer .layer-box .download-app-box .download-app-right .qr-code-img {
+  margin: 10px auto;
+  width: 96px;
+  height: 96px;
+}
+.right-floating-layer .layer-box .download-app-box .download-app-left .qr-words,
+.right-floating-layer .layer-box .download-app-box .download-app-right .qr-words {
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
+.right-floating-layer .layer-box .iconfont {
+  font-size: 34px;
 }
 
 /*# sourceMappingURL=index.css.map */

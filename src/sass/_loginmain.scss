@@ -41,32 +41,6 @@
                 cursor: pointer;
             }
         }
-        .switch {
-            height: 27px;
-        }
-        .left-part {
-            color: white;
-            background-color: #000;
-            width: 146px;
-            height: 27px;
-            text-align: center;
-            line-height: 27px;
-            border-radius: 13px;
-            position: absolute;
-            left: 0;
-            cursor: pointer;
-            z-index: 1;
-        }
-        .right-part {
-            background-color: #cccccc;
-            width: 146px;
-            height: 27px;
-            text-align: center;
-            line-height: 27px;
-            border-radius: 13px;
-            position: absolute;
-            right: 0;
-        }
         input {
             width: 268px;
             height: 43px;
