@@ -161,13 +161,29 @@
         height: 40px;
         .nav_wrapper {
             @extend %wrapper;
+            position: relative;
             li {
                 line-height: 40px;
                 padding-right: 46px;
+                padding-left: 36px;
                 box-sizing: border-box;
-                margin-right: 36px;
                 display: inline-block;
-                cursor: pointer;
+            }
+            .nav-content {
+                display: none;
+                width: 1150px;
+                height: 400px;
+                background-color: #f8f8f8;
+                position: absolute;
+                top: 40px;
+                left: 0px;
+                z-index: 1;
+                a {
+                    color: black;
+                    display: block;
+                    margin-left: 50px;
+                    margin-top: 40px;
+                }
             }
             a {
                 color: #fff;
@@ -202,7 +218,7 @@
                     border: none;
                     background: #fff;
                     box-sizing: border-box;
-                    padding-left: 10px;
+                    float: none;
                 }
             }
             .search-btn {

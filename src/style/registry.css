@@ -290,13 +290,31 @@ a {
   background-color: #3a3a3a;
   height: 40px;
 }
+.top .top_nav .nav_wrapper {
+  position: relative;
+}
 .top .top_nav .nav_wrapper li {
   line-height: 40px;
   padding-right: 46px;
+  padding-left: 36px;
   box-sizing: border-box;
-  margin-right: 36px;
   display: inline-block;
-  cursor: pointer;
+}
+.top .top_nav .nav_wrapper .nav-content {
+  display: none;
+  width: 1150px;
+  height: 400px;
+  background-color: #f8f8f8;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  z-index: 1;
+}
+.top .top_nav .nav_wrapper .nav-content a {
+  color: black;
+  display: block;
+  margin-left: 50px;
+  margin-top: 40px;
 }
 .top .top_nav .nav_wrapper a {
   color: #fff;
@@ -332,7 +350,7 @@ a {
   border: none;
   background: #fff;
   box-sizing: border-box;
-  padding-left: 10px;
+  float: none;
 }
 .top .func-area .search .search-btn {
   background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/search.png?173272e8fd2) no-repeat 50%;
@@ -400,37 +418,6 @@ a {
   position: relative;
   margin-bottom: 25px;
   width: 270px;
-}
-.registry-main .content .register-page .region {
-  padding: 4px 0;
-  width: 132px;
-  height: 30px;
-  border-color: #c1c1c1;
-  color: #9a9a9a;
-  font-size: 16px;
-}
-.registry-main .content .register-page .country-code {
-  display: block;
-  float: left;
-  width: 58px;
-  height: 43px;
-  border: 1px solid #dbdbdb;
-  border-right: 0;
-  text-align: center;
-  white-space: nowrap;
-  font-size: 16px;
-  line-height: 43px;
-}
-.registry-main .content .register-page .phone-num {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  width: 209px;
-}
-.registry-main .content .register-page .input.msg-captcha {
-  float: left;
-  width: 160px;
 }
 .registry-main .content .register-page .btn {
   width: 100px;
@@ -589,6 +576,89 @@ a {
 }
 .footer .footer-link .copyright .footer-text {
   color: #666;
+}
+.footer .right-floating-layer {
+  position: fixed;
+  width: 60px;
+  left: 50%;
+  bottom: 20px;
+  margin-left: 595px;
+  z-index: 4;
+}
+.footer .right-floating-layer .qrcode-hover-box {
+  width: 71px;
+  position: relative;
+  left: -11px;
+  text-align: right;
+}
+.footer .right-floating-layer .qrcode-hover-box .layer-box:first-child {
+  margin-top: 0;
+}
+.footer .right-floating-layer .qrcode-hover-box .qrcode-download-right {
+  display: inline-block;
+}
+.footer .right-floating-layer .layer-box {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  background: #000;
+  opacity: .5;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.footer .right-floating-layer .layer-box .qrcode-img {
+  width: 28px;
+  height: 28px;
+  background-image: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.scss.png?t=1594090251211);
+  background-position: -71px 0;
+  background-size: 123px 122px;
+  display: inline-block;
+  margin-top: 16px;
+}
+.footer .right-floating-layer .layer-box .download-app-box {
+  position: absolute;
+  bottom: -80px;
+  left: -286px;
+  width: 296px;
+  height: 180px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: transparent;
+  z-index: 1000;
+  display: none;
+  border: none;
+}
+.footer .right-floating-layer .layer-box .download-app-box:hover {
+  display: block;
+}
+.footer .right-floating-layer .layer-box .download-app-box .download-app-left,
+.footer .right-floating-layer .layer-box .download-app-box .download-app-right {
+  position: relative;
+  float: left;
+  width: 130px;
+  height: 180px;
+  padding-top: 10px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+.footer .right-floating-layer .layer-box .download-app-box .download-app-left .qr-code-img,
+.footer .right-floating-layer .layer-box .download-app-box .download-app-right .qr-code-img {
+  margin: 10px auto;
+  width: 96px;
+  height: 96px;
+}
+.footer .right-floating-layer .layer-box .download-app-box .download-app-left .qr-words,
+.footer .right-floating-layer .layer-box .download-app-box .download-app-right .qr-words {
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
+.footer .right-floating-layer .layer-box .iconfont {
+  font-size: 34px;
 }
 
 /*# sourceMappingURL=registry.css.map */

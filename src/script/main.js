@@ -15,7 +15,6 @@ require.config({
     }
 });
 
-
 require(['jquery'], function() {
     let $modulepage = $('#currentpage').attr('data-origin');
     require([$modulepage], function(modulepage) { //不同的页面加载不同的模块

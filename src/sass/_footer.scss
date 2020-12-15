@@ -102,4 +102,85 @@
             }
         }
     }
+    .right-floating-layer {
+        position: fixed;
+        width: 60px;
+        left: 50%;
+        bottom: 20px;
+        margin-left: 595px;
+        z-index: 4;
+        .qrcode-hover-box {
+            width: 71px;
+            position: relative;
+            left: -11px;
+            text-align: right;
+            .layer-box:first-child {
+                margin-top: 0;
+            }
+            .qrcode-download-right {
+                display: inline-block;
+            }
+        }
+        .layer-box {
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background: #000;
+            opacity: .5;
+            cursor: pointer;
+            margin-top: 20px;
+            .qrcode-img {
+                width: 28px;
+                height: 28px;
+                background-image: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.scss.png?t=1594090251211);
+                background-position: -71px 0;
+                background-size: 123px 122px;
+                display: inline-block;
+                margin-top: 16px;
+            }
+            .download-app-box {
+                position: absolute;
+                bottom: -80px;
+                left: -286px;
+                width: 296px;
+                height: 180px;
+                padding-left: 6px;
+                padding-right: 6px;
+                background-color: transparent;
+                z-index: 1000;
+                display: none;
+                border: none;
+                &:hover {
+                    display: block;
+                }
+                .download-app-left,
+                .download-app-right {
+                    position: relative;
+                    float: left;
+                    width: 130px;
+                    height: 180px;
+                    padding-top: 10px;
+                    text-align: center;
+                    background-color: #f4f4f4;
+                    .qr-code-img {
+                        margin: 10px auto;
+                        width: 96px;
+                        height: 96px;
+                    }
+                    .qr-words {
+                        height: 18px;
+                        line-height: 18px;
+                        font-size: 12px;
+                        text-align: center;
+                        color: #000;
+                    }
+                }
+            }
+            .iconfont {
+                font-size: 34px;
+            }
+        }
+    }
 }

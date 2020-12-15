@@ -1,9 +1,32 @@
 define([], () => {
     return {
         init: function() {
+
+            //logo翻转效果
             setInterval(function() {
                 $('h1').toggleClass('logo-cn')
             }, 3000);
+
+            //二级菜单
+            const $navlist = $('.nav-li');
+            const $navbox = $('.nav-box');
+            const $navcontent = $('.nav-content');
+            console.log($navcontent);
+            $navlist.hover(function() {
+                console.log($(this).index());
+                $navbox.show();
+                $navcontent.eq($(this).index()).show().siblings('.nav-content').hide();
+            }, function() {
+                $navbox.hide();
+            });
+            //2.鼠标移入右侧的大盒子，大盒子依然显示隐藏
+            $navbox.hover(function() {
+                $(this).show();
+            }, function() {
+                $(this).hide();
+            });
+
+
             //轮播图效果
             //获取元素
             const $banner = $('.banner');
@@ -64,56 +87,50 @@ define([], () => {
                 });
             }
 
+            //brand区域轮播
             const $img_brand = $('.img-brand');
-            const $ulist = $('.img-brand .img-list'); //运动的盒子
-            const $piclist2 = $('.brand-part1'); //6个图片
-            const $btnlist2 = $('.img-brand ol li'); //5个圈圈
+            const $ulist = $('.img-brand .img-list');
+            const $piclist2 = $('.brand-part1');
             const $leftarrow = $('.brand-left');
             const $rightarrow = $('.brand-right');
             let $timerb = null;
-            let $num1 = 0; //存储索引值
-            const $liwidth = $piclist2.eq(0).width(); //1个li的宽度(图片的宽度)
+            let $num1 = 0;
+            const $liwidth = $piclist2.eq(0).width();
             $ulist.width($liwidth * $piclist2.length);
             $img_brand.hover(function() {
-                clearInterval($timerb); //鼠标移入停止自动轮播
+                clearInterval($timerb);
                 $leftarrow.show();
                 $rightarrow.show();
             }, function() {
                 $leftarrow.hide();
                 $rightarrow.hide();
-                $timerb = setInterval(function() { //鼠标移出继续自动轮播。
+                $timerb = setInterval(function() {
                     $rightarrow.click();
                 }, 3000);
             });
-            //4.左右箭头添加点击事件。
             $rightarrow.on('click', function() {
                 lunboSwitch();
             });
-
             $leftarrow.on('click', function() {
-                $num1 -= 2; //-1:$ulist迁移一张图片，但是封装函数里面又有++,达到-1的效果，需要-2.
+                $num1 -= 2;
                 lunboSwitch();
             });
 
-            //5.代码冗余，进行函数封装
             function lunboSwitch() {
                 $num1++;
-                console.log($num1, $piclist2.length);
                 if ($num1 === $piclist2.length) {
-                    $ulist.attr('left', 0);
-                    $num1 = 0;
+                    $ulist.css('left', 0);
+                    $num1 = 1;
                 }
-                //判断左箭头
                 if ($num1 === -1) {
-                    $ulist.attr('left', -$liwidth * $piclist2.length);
+                    $ulist.css('left', -$liwidth * $piclist2.length);
                     $num1 = $piclist2.length;
                 }
                 $ulist.stop(true).animate({
-                    left: -$liwidth
+                    left: -$liwidth * $num1
                 });
             }
-
-            //6.自动轮播
+            //自动轮播
             $timerb = setInterval(function() {
                 $rightarrow.click();
             }, 3000);
@@ -127,7 +144,7 @@ define([], () => {
             const $goodslist = $('.newgoods-main');
             //1.渲染list.html页面
             $.ajax({
-                url: 'http://localhost/dashboard/yohobuy1/php/indexgoods.php',
+                url: 'http://10.31.161.53/dashboard/yohobuy1/php/indexgoods.php',
                 dataType: 'json'
             }).done(function(data) {
                 let $strhtml = '';

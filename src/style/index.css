@@ -290,13 +290,31 @@ a {
   background-color: #3a3a3a;
   height: 40px;
 }
+.top .top_nav .nav_wrapper {
+  position: relative;
+}
 .top .top_nav .nav_wrapper li {
   line-height: 40px;
   padding-right: 46px;
+  padding-left: 36px;
   box-sizing: border-box;
-  margin-right: 36px;
   display: inline-block;
-  cursor: pointer;
+}
+.top .top_nav .nav_wrapper .nav-content {
+  display: none;
+  width: 1150px;
+  height: 400px;
+  background-color: #f8f8f8;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  z-index: 1;
+}
+.top .top_nav .nav_wrapper .nav-content a {
+  color: black;
+  display: block;
+  margin-left: 50px;
+  margin-top: 40px;
 }
 .top .top_nav .nav_wrapper a {
   color: #fff;
@@ -332,7 +350,7 @@ a {
   border: none;
   background: #fff;
   box-sizing: border-box;
-  padding-left: 10px;
+  float: none;
 }
 .top .func-area .search .search-btn {
   background: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/search.png?173272e8fd2) no-repeat 50%;
@@ -509,7 +527,7 @@ a {
   width: 185px;
   height: 86px;
   line-height: 86px;
-  font-size: 0;
+  font-size: 16px;
   text-align: center;
 }
 .brand .logo-brand-switch {
@@ -548,8 +566,10 @@ a {
   position: relative;
   overflow: hidden;
 }
+.brand .img-brand .brand-part1 {
+  float: left;
+}
 .brand .img-brand .img-list {
-  width: 3000px;
   position: absolute;
   left: 0;
 }
@@ -560,7 +580,7 @@ a {
   height: 175px;
   line-height: 175px;
   overflow: hidden;
-  font-size: 0;
+  font-size: 12px;
   text-align: center;
 }
 .brand .img-brand .prev {
@@ -572,6 +592,7 @@ a {
   right: 0px;
 }
 .brand .img-brand .img-brand-switch a {
+  display: block;
   position: absolute;
   top: 50%;
   margin: -20px 0 0;
@@ -582,6 +603,10 @@ a {
   z-index: 2;
   background: #fff;
   opacity: .55;
+}
+.brand .brand-more a {
+  display: block;
+  color: #000;
 }
 
 .top .top_search, .top .top_nav .nav_wrapper, .banner, .hotgoods, .brand, .upper, .newgoods, .footer .footer-wrapper {
@@ -872,8 +897,7 @@ a {
 .footer .footer-link .copyright .footer-text {
   color: #666;
 }
-
-.right-floating-layer {
+.footer .right-floating-layer {
   position: fixed;
   width: 60px;
   left: 50%;
@@ -881,19 +905,19 @@ a {
   margin-left: 595px;
   z-index: 4;
 }
-.right-floating-layer .qrcode-hover-box {
+.footer .right-floating-layer .qrcode-hover-box {
   width: 71px;
   position: relative;
   left: -11px;
   text-align: right;
 }
-.right-floating-layer .qrcode-hover-box .layer-box:first-child {
+.footer .right-floating-layer .qrcode-hover-box .layer-box:first-child {
   margin-top: 0;
 }
-.right-floating-layer .qrcode-hover-box .qrcode-download-right {
+.footer .right-floating-layer .qrcode-hover-box .qrcode-download-right {
   display: inline-block;
 }
-.right-floating-layer .layer-box {
+.footer .right-floating-layer .layer-box {
   width: 60px;
   height: 60px;
   text-align: center;
@@ -904,7 +928,7 @@ a {
   cursor: pointer;
   margin-top: 20px;
 }
-.right-floating-layer .layer-box .qrcode-img {
+.footer .right-floating-layer .layer-box .qrcode-img {
   width: 28px;
   height: 28px;
   background-image: url(https://cdn.yoho.cn/yohobuy-node/6.11.0/img/sprite.scss.png?t=1594090251211);
@@ -913,7 +937,7 @@ a {
   display: inline-block;
   margin-top: 16px;
 }
-.right-floating-layer .layer-box .download-app-box {
+.footer .right-floating-layer .layer-box .download-app-box {
   position: absolute;
   bottom: -80px;
   left: -286px;
@@ -926,11 +950,11 @@ a {
   display: none;
   border: none;
 }
-.right-floating-layer .layer-box .download-app-box:hover {
+.footer .right-floating-layer .layer-box .download-app-box:hover {
   display: block;
 }
-.right-floating-layer .layer-box .download-app-box .download-app-left,
-.right-floating-layer .layer-box .download-app-box .download-app-right {
+.footer .right-floating-layer .layer-box .download-app-box .download-app-left,
+.footer .right-floating-layer .layer-box .download-app-box .download-app-right {
   position: relative;
   float: left;
   width: 130px;
@@ -939,21 +963,21 @@ a {
   text-align: center;
   background-color: #f4f4f4;
 }
-.right-floating-layer .layer-box .download-app-box .download-app-left .qr-code-img,
-.right-floating-layer .layer-box .download-app-box .download-app-right .qr-code-img {
+.footer .right-floating-layer .layer-box .download-app-box .download-app-left .qr-code-img,
+.footer .right-floating-layer .layer-box .download-app-box .download-app-right .qr-code-img {
   margin: 10px auto;
   width: 96px;
   height: 96px;
 }
-.right-floating-layer .layer-box .download-app-box .download-app-left .qr-words,
-.right-floating-layer .layer-box .download-app-box .download-app-right .qr-words {
+.footer .right-floating-layer .layer-box .download-app-box .download-app-left .qr-words,
+.footer .right-floating-layer .layer-box .download-app-box .download-app-right .qr-words {
   height: 18px;
   line-height: 18px;
   font-size: 12px;
   text-align: center;
   color: #000;
 }
-.right-floating-layer .layer-box .iconfont {
+.footer .right-floating-layer .layer-box .iconfont {
   font-size: 34px;
 }
 
