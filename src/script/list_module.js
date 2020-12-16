@@ -7,13 +7,11 @@ define(['pagination', 'jlazyload'], () => {
                 $(this).addClass('active').siblings('a').removeClass('active');
             });
 
-            $('.m-style').on('click', function() {
-                $('.sort-type').eq(0).addClass('active').siblings('a').removeClass('active');
-            });
 
-            $(window).on('reload', function() {
-                $('.sort-type').eq(0).addClass('active').siblings('a').removeClass('active');
-            });
+
+            // $(window).on('reload', function() {
+            //     $('.sort-type').eq(0).addClass('active').siblings('a').removeClass('active');
+            // });
 
             const $list = $('.list-render ul');
             let $array_default = [];
@@ -52,6 +50,7 @@ define(['pagination', 'jlazyload'], () => {
                     prevContent: '上一页',
                     nextContent: '下一页',
                     callback: function(api) {
+                        $('.sort-type').eq(0).addClass('active').siblings('a').removeClass('active');
                         $.ajax({
                             url: 'http://10.31.161.53/dashboard/yohobuy1/php/list.php',
                             data: {

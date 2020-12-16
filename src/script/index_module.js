@@ -1,4 +1,4 @@
-define([], () => {
+define(['jlazyload'], () => {
     return {
         init: function() {
 
@@ -161,6 +161,7 @@ define([], () => {
                 });
                 $goodslist.html($strhtml);
             });
+
             //点击返回顶部效果
             const $rtop = $('.return-top');
             const $layer = $('.right-floating-layer');

@@ -1,72 +1,146 @@
 define(['jcookie'], () => {
     return {
         init: function() {
-            //1.通过地址栏获取列表页面传入的sid。
             let $sid = location.search.substring(1).split('=')[1];
+
             if (!$sid) {
                 $sid = 1;
             }
-            //2.将sid传给后端，后端根据对应的sid返回不同的数据。
             $.ajax({
-                url: 'http://localhost/JS2010/week06/Day%2029-Day%2031_jquery/projectname/php/detail.php',
+                url: 'http://10.31.161.53/dashboard/yohobuy1/php/detail.php',
                 data: {
                     sid: $sid
                 },
                 dataType: 'json'
             }).done(function(data) {
-                console.log(data);
-                console.log(data.urls);
-                //获取数据，将数据放入对应的结构中。
                 $('#smallpic').attr('src', data.url);
                 $('.loadtitle').html(data.title);
                 $('.loadpcp').html(data.price);
+                $('#bpic').attr('src', data.url);
 
-                //渲染放大镜下面的小图
-                let $picurl = data.urls.split(','); //将数据转换成数组。
-                let $strhtml = '';
+                let $picurl = data.urls.split(',');
+                let $strhtml = '<ul>';
                 const $list = $('#list');
-                console.log($picurl);
                 $.each($picurl, function(index, value) {
-                    $strhtml += `
-                <li>
-                    <img src="${value}"/>
-                </li>
-            `;
+                    $strhtml += `<li><img src="${value}"/></li>`;
                 });
+                $strhtml += '<ul>';
                 $list.html($strhtml);
             });
+            $('#main-li li:first-child').addClass('active');
+            const $spic = $('#spic');
+            const $bpic = $('#bpic');
+            const $small = $('#smallpic')
+            const $sf = $('#sf');
+            const $bf = $('#bf');
+            const $list = $('#list');
+
+            $sf.width($spic.width() * $bf.width() / $bpic.width());
+            $sf.height($spic.height() * $bf.height() / $bpic.height());
+            let $bili = $bpic.width() / $spic.width();
+            $spic.hover(function() {
+                $sf.css('visibility', 'visible');
+                $bf.css('visibility', 'visible');
+                $(this).on('mousemove', function(ev) {
+                    let $leftvalue = ev.pageX - $('.goodsinfo').offset().left - $sf.width() / 2;
+                    let $topvalue = ev.pageY - $('.goodsinfo').offset().top - $sf.height() / 2;
+                    if ($leftvalue < 0) {
+                        $leftvalue = 0;
+                    } else if ($leftvalue >= $spic.width() - $sf.width()) {
+                        $leftvalue = $spic.width() - $sf.width()
+                    }
+
+                    if ($topvalue < 0) {
+                        $topvalue = 0;
+                    } else if ($topvalue >= $spic.height() - $sf.height()) {
+                        $topvalue = $spic.height() - $sf.height()
+                    }
+
+                    $sf.css({
+                        left: $leftvalue,
+                        top: $topvalue
+                    });
+
+                    $bpic.css({
+                        left: -$leftvalue * $bili,
+                        top: -$topvalue * $bili
+                    });
+
+                });
+            }, function() {
+                $sf.css('visibility', 'hidden');
+                $bf.css('visibility', 'hidden');
+            });
+            // $(window).on('reload', '#main-li:first-child', function() {
+            //     addClass('active');
+            // });
+            $list.on('mouseover', 'li', function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                let $imgurl = $(this).find('img').attr('src');
+                $small.attr('src', $imgurl);
+                $bpic.attr('src', $imgurl);
+            });
+            let arrsid = [];
+            let arrnum = [];
+
+            $list.on('mouseover', 'img', function() {
+
+            })
 
 
-
-            //五.购物车：(商品sid、商品数量)
-            //1.设置存储cookie的变量。
-            let arrsid = []; //存储商品的sid
-            let arrnum = []; //存储商品的数量
-            //2.判断是第一次存储，多次存储。
-            //获取cookie才能判断，每存储一个商品对应的cookie就会发生变化。
-            //提前预判cookie设置时的key值(cookiesid/cookienum)
             function getcookietoarray() {
                 if ($.cookie('cookiesid') && $.cookie('cookienum')) {
                     arrsid = $.cookie('cookiesid').split(',');
                     arrnum = $.cookie('cookienum').split(',');
                 }
             }
+
             $('.p-btn a').on('click', function() {
-                getcookietoarray(); //获取cookie，变成数组，判断是否存在。
-                if ($.inArray($sid, arrsid) === -1) { //不存在
+                getcookietoarray();
+                if ($.inArray($sid, arrsid) === -1) {
                     arrsid.push($sid);
                     $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
                     arrnum.push($('#count').val());
                     $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
-                } else { //存着
-                    //通过$sid获取商品的数量所在的位置。
+                } else {
                     let $index = $.inArray($sid, arrsid);
-                    // arrnum[$index]//原来的数组
-                    // $('#count').val()//新添加的数量
-                    arrnum[$index] = parseInt(arrnum[$index]) + parseInt($('#count').val()); //重新赋值
+                    arrnum[$index] = parseInt(arrnum[$index]) + parseInt($('#count').val());
                     $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
                 }
             });
+
+            $('.p-btn a').on('click', function() {
+                $(this).css('background-color', 'red');
+                $('.success').css('display', 'block')
+            })
+
+
+
+
+
+
+            //点击返回顶部效果
+            const $rtop = $('.return-top');
+            const $layer = $('.right-floating-layer');
+
+            function scroll() {
+                var $scrolltop = $(window).scrollTop();
+                if ($scrolltop > 0) {
+                    $layer.show();
+                } else {
+                    $layer.hide();
+                };
+            };
+            scroll();
+            $(window).on('scroll', function() {
+                scroll();
+            });
+
+            $rtop.on("click", function() {
+                $('html').animate({
+                    scrollTop: 0
+                });
+            })
         }
     }
 });
