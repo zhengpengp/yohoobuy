@@ -34,7 +34,7 @@
                     </li>
                 </ul>
                 <span class="iconfont icon-iconfront- "></span>
-                <a href="./index1.html" class="top_tittle">YOHO!BUY 有货</a>
+                <a href="./index.html" class="top_tittle">YOHO!BUY 有货</a>
             </div>
             <div class="login_infor left">
                 <span class="iconfont icon-gantanhao"></span>
@@ -44,6 +44,10 @@
                 <ul>
                     <li id="loginBox" class="login">
                         <span class="hi">Hi~</span> [ <a href="./login.html" class="loginbar">请登录</a> ] [ <a href="./registry.html" class="registbar">免费注册</a> ]
+                    </li>
+                    <li id="login-hello">
+                        <span class="hi">Hi~</span><span class="welcome"></span>：欢迎光临
+                        <a href="javascript:;">退出</a>
                     </li>
                     <li class="myyoho login-list">
                         <a href="#" rel="nofollow">MY有货</a>
@@ -87,9 +91,6 @@
         </div>
         <!-- 搜索框 -->
         <div class="top_search">
-            <!-- https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-en.png?173272e8fce 
-            https://cdn.yoho.cn/yohobuy-node/6.11.0/img/layout/logo-cn.png?173272e8fce
-        -->
             <div>
                 <h1 class="main-logo">
                     <a href="//www.yohobuy.com/ " class="main-link " title="YOHO!BUY 有货-潮流服饰,潮流女装,潮流男装,时尚潮流购物网站 "></a>
@@ -104,7 +105,7 @@
                 </div>
 
                 <div class="go-cart">
-                    <a href="//www.yohobuy.com/cart/cart" rel="nofollow">
+                    <a href="./cart.html" rel="nofollow">
                         <span class="iconfont icon-gouwuchekong"></span>
                     </a>
                 </div>
@@ -114,15 +115,23 @@
         <div class="top_nav">
             <div class="nav_wrapper fix">
                 <ul class="nav-list">
-                    <li><a href="#">新品到这</a></li>
-                    <li><a href="#">品牌一览</a></li>
-                    <li><a href="#">服饰</a></li>
-                    <li><a href="#">鞋履</a></li>
-                    <li><a href="#">包袋</a></li>
-                    <li><a href="#">配饰·其他</a></li>
+                    <li class="nav-li"><a href="#">新品到这</a></li>
+                    <li class="nav-li"><a href="#">品牌一览</a></li>
+                    <li class="nav-li"><a href="#">服饰</a></li>
+                    <li class="nav-li"><a href="#">鞋履</a></li>
+                    <li class="nav-li"><a href="#">包袋</a></li>
+                    <li class="nav-li"><a href="#">配饰·其他</a></li>
                     <li><a href="#">SALE</a></li>
                     <li><a href="#">证照/协议</a></li>
                 </ul>
+                <div class="nav-box">
+                    <div class="nav-content">asdacxczcwsdfas</div>
+                    <div class="nav-content">sadfgadfvzxcvwfwerd</div>
+                    <div class="nav-content"><a href="./list.html">点击跳转列表页</a></div>
+                    <div class="nav-content">dwarfvxcvzxvwqerf</div>
+                    <div class="nav-content">xdv1xc32vb1x6c5gb4xfg6</div>
+                    <div class="nav-content">hty5j465f1we651cv</div>
+                </div>
             </div>
         </div>
     </div>
@@ -136,38 +145,41 @@
         </div>
         <div class="content">
             <div class="register-page">
-                <ul>
-                    <li class="fix">
-                        <input value="" id="phone-num" class="input va phone-num" type="text" name="username" placeholder="请输入用户名">
-                    </li>
-                    <li class="fix">
-                        <input id="pwd" class="input va pwd" name="password" placeholder="设置密码" maxlength="20" type="password">
-                        <div class="pwd-intensity-container">
-                            <span class="pwd-intensity low">低</span>
-                            <span class="pwd-intensity mid">中</span>
-                            <span class="pwd-intensity high">高</span>
-                        </div>
-                        <div id="pwd-tips" class="hide pwd-tips">
-                            <div class="default" id="pwd-tip1"><i></i>密码只支持6-20位字符</div>
-                            <div class="default" id="pwd-tip2"><i></i>由字母、 数字组合，不能包含特殊符号</div>
-                        </div>
-                    </li>
-                    <li class="items-container fix">
-                        <span>
-                注册即表示您已阅读并同意<br>
-                <a class="link go-yoho-items" href="//www.yohobuy.com/help/detail?id=254" target="_blank">有货用户服务协议</a>
-                <a class="link go-yoho-items" href="//www.yohobuy.com/help/detail?id=256" target="_blank">有货隐私条款</a>
-            </span>
-                    </li>
-                    <li class="fix reg-btn-area">
-                        <input name="refer" id="refer" type="hidden" value="">
-                        <input id="register-btn" class="btn register-btn disable" type="submit" value="立即注册" disabled="">
-                    </li>
-                    <li class="quick-login-container">
-                        我已注册YOHO!BUY 有货账号
-                        <a class="link go-login" href="./login.html">快速登录</a>
-                    </li>
-                </ul>
+                <form action="http://10.31.161.53/dashboard/yohobuy1/php/registry.php" method="POST" id="registry">
+                    <ul>
+                        <li class="fix">
+                            <input value="" id="username" class="input va phone-num" type="text" name="username" placeholder="请输入用户名">
+                            <span class="judgementname"></span>
+                        </li>
+                        <li class="fix">
+                            <input value="" id="telphone" class="input va phone-num" type="text" name="telphone" placeholder="请输入手机号码">
+                            <span class="judgementtel"></span>
+                        </li>
+                        <li class="fix">
+                            <input id="password" class="input va pwd" name="password" placeholder="设置密码" type="password">
+                            <span class="judgementpwd"></span>
+                        </li>
+                        <li class="fix">
+                            <input value="" id="email" class="input va phone-num" type="text" name="email" placeholder="请输入邮箱">
+                            <span class="judgementemail"></span>
+                        </li>
+                        <li class="items-container fix">
+                            <span>
+                                注册即表示您已阅读并同意
+                                <br>
+                                <a class="link go-yoho-items" href="//www.yohobuy.com/help/detail?id=254" target="_blank">有货用户服务协议</a>
+                                <a class="link go-yoho-items" href="//www.yohobuy.com/help/detail?id=256" target="_blank">有货隐私条款</a>
+                            </span>
+                        </li>
+                        <li class="fix reg-btn-area">
+                            <input id="submit" class="btn register-btn submit" type="submit" name="submit" value="立即注册">
+                        </li>
+                        <li class="quick-login-container">
+                            我已注册YOHO!BUY 有货账号
+                            <a class="link go-login" href="./login.html">快速登录</a>
+                        </li>
+                    </ul>
+                </form>
             </div>
         </div>
     </div>

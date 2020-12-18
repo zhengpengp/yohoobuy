@@ -7,11 +7,26 @@ define(['jlazyload'], () => {
                 $('h1').toggleClass('logo-cn')
             }, 3000);
 
+            //检测用户是否已经登录，如果登录，则将登录框变成欢迎
+
+            if (localStorage.getItem('.loginbar')) {
+                $('#login-hello').show();
+                $('#loginBox').hide();
+                $('#login-hello .welcome').html(localStorage.getItem('.loginbar'));
+            }
+
+            //退出登录 - 删除本地存储
+            $('#login-hello a').on('click', function() {
+                $('#login-hello').hide();
+                $('#loginBox').show();
+                localStorage.removeItem('.loginbar');
+            });
+
+
             //二级菜单
             const $navlist = $('.nav-li');
             const $navbox = $('.nav-box');
             const $navcontent = $('.nav-content');
-            console.log($navcontent);
             $navlist.hover(function() {
                 console.log($(this).index());
                 $navbox.show();
@@ -122,22 +137,18 @@ define(['jlazyload'], () => {
                     $ulist.css('left', 0);
                     $num1 = 1;
                 }
-                if ($num1 === -1) {
-                    $ulist.css('left', -$liwidth * $piclist2.length);
-                    $num1 = $piclist2.length;
+                if ($num1 < 0) {
+                    $ulist.css('left', -$liwidth * ($piclist2.length - 1));
+                    $num1 = $piclist2.length - 2;
                 }
                 $ulist.stop(true).animate({
                     left: -$liwidth * $num1
                 });
             }
-            //自动轮播
+            // 自动轮播
             $timerb = setInterval(function() {
                 $rightarrow.click();
             }, 3000);
-
-
-
-
 
 
             //渲染商品

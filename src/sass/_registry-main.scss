@@ -76,6 +76,7 @@
                 background-position: -148px -158px;
                 background-size: 595px 298px;
                 font-size: 12px;
+                display: none;
             }
             .items-container {
                 text-align: left;
@@ -99,6 +100,16 @@
                 text-decoration: underline;
                 color: red;
             }
+        }
+        .judgementname,
+        .judgementtel,
+        .judgementpwd,
+        .judgementemail {
+            margin-left: 20px;
+            position: absolute;
+            width: 120px;
+            line-height: 24px;
+            font-size: 12px;
         }
     }
 }

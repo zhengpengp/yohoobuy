@@ -1,6 +1,43 @@
 define(['pagination', 'jlazyload'], () => {
     return {
         init: function() {
+
+            //检测用户是否已经登录，如果登录，则将登录框变成欢迎
+
+            if (localStorage.getItem('.loginbar')) {
+                $('#login-hello').show();
+                $('#loginBox').hide();
+                $('#login-hello .welcome').html(localStorage.getItem('.loginbar'));
+            }
+
+            //退出登录 - 删除本地存储
+            $('#login-hello a').on('click', function() {
+                $('#login-hello').hide();
+                $('#loginBox').show();
+                localStorage.removeItem('.loginbar');
+            });
+
+            //二级菜单
+            const $navlist = $('.nav-li');
+            const $navbox = $('.nav-box');
+            const $navcontent = $('.nav-content');
+            $navlist.hover(function() {
+                console.log($(this).index());
+                $navbox.show();
+                $navcontent.eq($(this).index()).show().siblings('.nav-content').hide();
+            }, function() {
+                $navbox.hide();
+            });
+            //2.鼠标移入右侧的大盒子，大盒子依然显示隐藏
+            $navbox.hover(function() {
+                $(this).show();
+            }, function() {
+                $(this).hide();
+            });
+
+
+
+
             const $chose = $('.list-sort .sort-type');
 
             $chose.on('click', function() {
@@ -8,10 +45,6 @@ define(['pagination', 'jlazyload'], () => {
             });
 
 
-
-            // $(window).on('reload', function() {
-            //     $('.sort-type').eq(0).addClass('active').siblings('a').removeClass('active');
-            // });
 
             const $list = $('.list-render ul');
             let $array_default = [];

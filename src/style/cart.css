@@ -217,6 +217,14 @@ a {
 .top .login a {
   color: #8e8e8e;
 }
+.top .login-right {
+  position: relative;
+}
+.top #login-hello {
+  left: -140px;
+  position: absolute;
+  display: none;
+}
 .top .login-right .login-list {
   float: left;
   padding-right: 10px;

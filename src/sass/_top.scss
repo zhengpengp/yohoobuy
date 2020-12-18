@@ -81,6 +81,14 @@
             color: #8e8e8e;
         }
     }
+    .login-right {
+        position: relative;
+    }
+    #login-hello {
+        left: -140px;
+        position: absolute;
+        display: none;
+    }
     .login-right .login-list {
         float: left;
         padding-right: 10px;

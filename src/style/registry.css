@@ -217,6 +217,14 @@ a {
 .top .login a {
   color: #8e8e8e;
 }
+.top .login-right {
+  position: relative;
+}
+.top #login-hello {
+  left: -140px;
+  position: absolute;
+  display: none;
+}
 .top .login-right .login-list {
   float: left;
   padding-right: 10px;
@@ -453,6 +461,7 @@ a {
   background-position: -148px -158px;
   background-size: 595px 298px;
   font-size: 12px;
+  display: none;
 }
 .registry-main .content .register-page .items-container {
   text-align: left;
@@ -475,6 +484,16 @@ a {
 .registry-main .content .register-page .go-login {
   text-decoration: underline;
   color: red;
+}
+.registry-main .content .judgementname,
+.registry-main .content .judgementtel,
+.registry-main .content .judgementpwd,
+.registry-main .content .judgementemail {
+  margin-left: 20px;
+  position: absolute;
+  width: 120px;
+  line-height: 24px;
+  font-size: 12px;
 }
 
 .top .top_search, .top .top_nav .nav_wrapper, .footer .footer-wrapper {

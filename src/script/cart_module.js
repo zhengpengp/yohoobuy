@@ -1,6 +1,23 @@
 define(['jcookie'], () => {
     return {
         init: function() {
+
+            //检测用户是否已经登录，如果登录，则将登录框变成欢迎
+
+            if (localStorage.getItem('.loginbar')) {
+                $('#login-hello').show();
+                $('#loginBox').hide();
+                $('#login-hello .welcome').html(localStorage.getItem('.loginbar'));
+            }
+
+            //退出登录 - 删除本地存储
+            $('#login-hello a').on('click', function() {
+                $('#login-hello').hide();
+                $('#loginBox').show();
+                localStorage.removeItem('.loginbar');
+            });
+
+
             //二级菜单
             const $navlist = $('.nav-li');
             const $navbox = $('.nav-box');
